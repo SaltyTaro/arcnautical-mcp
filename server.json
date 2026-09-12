@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.saltytaro/arcnautical",
+  "description": "Screen any vessel by IMO for sanctions (OFAC, EU, UN, UK), ownership opacity and vetting grade. Two tools need no API key.",
+  "repository": {
+    "url": "https://github.com/SaltyTaro/arcnautical-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://arcnautical.com/developers/",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@arcnautical/mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "ARCNAUTICAL_API_KEY",
+          "description": "Optional. Self-serve at https://arcnautical.com/arcnautical.html#/developer-api; unlocks the full screening record, batches and voyage scoring. check_vessel and find_port work without it.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

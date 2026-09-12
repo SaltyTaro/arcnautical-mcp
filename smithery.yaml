@@ -1,0 +1,16 @@
+# Smithery (smithery.ai) — hosted/installable MCP config
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      arcnauticalApiKey:
+        type: string
+        title: ArcNautical API key
+        description: Optional. Self-serve at https://arcnautical.com/arcnautical.html#/developer-api. check_vessel and find_port work without it.
+  commandFunction: |-
+    (config) => ({
+      command: 'node',
+      args: ['dist/cli.js'],
+      env: config.arcnauticalApiKey ? { ARCNAUTICAL_API_KEY: config.arcnauticalApiKey } : {}
+    })
