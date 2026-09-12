@@ -7,7 +7,7 @@
   "homepage": "https://arcnautical.com/developers/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SaltyTaro/arcnautical-mcp.git"
+    "url": "git+https://github.com/SaltyTaro/arcnautical-mcp.git"
   },
   "bugs": {
     "url": "https://github.com/SaltyTaro/arcnautical-mcp/issues"
@@ -31,7 +31,7 @@
   ],
   "type": "module",
   "bin": {
-    "arcnautical-mcp": "./dist/cli.js"
+    "arcnautical-mcp": "dist/cli.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
